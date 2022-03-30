@@ -2,30 +2,16 @@
  * @Author       : wanglei
  * @Date         : 2022-03-29 21:44:46
  * @LastEditors  : wanglei
- * @LastEditTime : 2022-03-30 09:26:54
+ * @LastEditTime : 2022-03-29 23:22:08
  * @FilePath     : /shangguigu-todolist/src/components/List/index.jsx
  * @description  : 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import React, { Component } from 'react';
-import PubSub from 'pubsub-js'
 import './index.css';
 
 export default class List extends Component {
-  
-  state = { users: [], isFirst: true, isLoading: false, err: '' };
-
-  componentDidMount(){
-    // 可以用_, 来代表第一个参数不用传
-    this.token = PubSub.subscribe('atguigu', (_,stateObj) => {
-      this.setState(stateObj)
-    });
-  }
-  componentWillUnmount(){
-    PubSub.unsubscribe(this.token);
-  }
-
   render() {
-    const { users, isFirst, isLoading, err } = this.state;
+    const { users, isFirst, isLoading, err } = this.props;
     return (
       <div className="row">
         {isFirst ? (
