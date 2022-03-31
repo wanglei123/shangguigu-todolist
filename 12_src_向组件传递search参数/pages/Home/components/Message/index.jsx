@@ -2,7 +2,7 @@
  * @Author       : wanglei
  * @Date         : 2022-03-31 14:29:53
  * @LastEditors  : wanglei
- * @LastEditTime : 2022-03-31 16:51:40
+ * @LastEditTime : 2022-03-31 16:16:56
  * @FilePath     : /shangguigu-todolist/src/pages/Home/components/Message/index.jsx
  * @description  : 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -30,15 +30,8 @@ export default class Message extends Component {
                 {/* <Link to={`/home/message/detail/${messageObj.id}/${messageObj.title}`}>{messageObj.title}</Link> */}
 
                 {/* 向路由组件传递search参数 */}
-                {/* <Link
-                  to={`/home/message/detail/?id=${messageObj.id}&title=${messageObj.title}`}
-                >
-                  {messageObj.title}
-                </Link> */}
-
-                {/* 向路由组件传递state参数 */}
                 <Link
-                  to={{pathname: '/home/message/detail', state: {id: messageObj.id, title: messageObj.title}}}
+                  to={`/home/message/detail/?id=${messageObj.id}&title=${messageObj.title}`}
                 >
                   {messageObj.title}
                 </Link>
@@ -51,9 +44,6 @@ export default class Message extends Component {
         {/* <Route path="/home/message/detail/:id/:title" component={Detail}></Route> */}
 
         {/* search参数无需声明接收，正常注册路由即可 */}
-        {/* <Route path="/home/message/detail" component={Detail}></Route> */}
-
-        {/* state参数无需声明接收，正常注册路由即可 */}
         <Route path="/home/message/detail" component={Detail}></Route>
       </div>
     );
