@@ -2,8 +2,8 @@
  * @Author       : wanglei
  * @Date         : 2022-03-27 11:59:30
  * @LastEditors  : wanglei
- * @LastEditTime : 2022-03-30 21:31:40
- * @FilePath     : /shangguigu-todolist/src/App.js
+ * @LastEditTime : 2022-03-31 09:28:06
+ * @FilePath     : /shangguigu-todolist/05_src_路由的基本使用/App.js
  * @description  : 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
 import React, { Component } from 'react';
@@ -14,7 +14,7 @@ import About from './components/About';
 export default class App extends Component {
   render() {
     return (
-      <div classNameName="container">
+      <div className="container">
         <div className="row">
           <div className="col-xs-offset-2 col-xs-8">
             <div className="page-header">

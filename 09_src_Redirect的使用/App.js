@@ -2,7 +2,7 @@
  * @Author       : wanglei
  * @Date         : 2022-03-27 11:59:30
  * @LastEditors  : wanglei
- * @LastEditTime : 2022-03-31 14:44:50
+ * @LastEditTime : 2022-03-31 14:20:31
  * @FilePath     : /shangguigu-todolist/src/App.js
  * @description  : 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -39,8 +39,8 @@ export default class App extends Component {
                 {/* 注册路由 */}
                 <Switch>
                 {/* 用switch包一下，可以避免同名组件同时渲染，只会渲染匹配的第一个组件 */}
-                  <Route  path="/about" component={About} />
-                  <Route  path="/home" component={Home} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/home" component={Home} />
                   {/* 放在最后，以上都没匹配到的话，会走到redirect */}
                   <Redirect to="/about" />
                 </Switch>
